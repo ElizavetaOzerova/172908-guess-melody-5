@@ -1,7 +1,7 @@
 # Учебный проект «Угадай мелодию» [![Build status][travis-image]][travis-url]
 
 * Студент: [Елизавета Озерова](https://up.htmlacademy.ru/react/5/user/172908).
-* Наставник: `Неизвестно`.
+* Наставник: [Богдан Волик](https://up.htmlacademy.ru/react/5/user/997699).
 
 ---
 
