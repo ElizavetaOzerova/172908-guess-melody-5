@@ -1,4 +1,4 @@
-const AVATAR_URL = `https://api.adorable.io/avatars/3`;
+const AVATAR_URL = `https://api.adorable.io/avatars/128`;
 
 export default [
   {
@@ -30,7 +30,7 @@ export default [
       artist: `Royal Blood`,
       picture: `${AVATAR_URL}/${Math.random()}`,
     }, {
-      artist: `Berliner Philharmoniker`,
+      artist: `Hans Zimmer`,
       picture: `${AVATAR_URL}/${Math.random()}`,
     }]
   },

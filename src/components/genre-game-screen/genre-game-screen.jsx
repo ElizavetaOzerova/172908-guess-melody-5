@@ -13,7 +13,7 @@ class GenreGameScreen extends PureComponent {
   render() {
     const {question, onAnswer} = this.props;
     const {genre, answers} = question;
-    const {answers: {userAnswers}} = this.state;
+    const {answers: userAnswers} = this.state;
 
     return (
       <section className="game game--genre">
@@ -24,7 +24,7 @@ class GenreGameScreen extends PureComponent {
           </a>
           <svg xmlns="http://www.w3.org/2000/svg" className="timer" viewBox="0 0 780 780">
             <circle className="timer__line" cx="390" cy="390" r="370"
-              style={{'filter': `url(#blur)`, 'transform': `rotate(-90deg) scaleY(-1)`, 'transform-origin': `center`}} />
+              style={{filter: `url(#blur)`, transform: `rotate(-90deg) scaleY(-1)`, transformOrigin: `center`}} />
           </svg>
           <div className="game__mistakes">
             <div className="wrong"></div>
@@ -80,10 +80,10 @@ GenreGameScreen.propTypes = {
   question: PropTypes.shape({
     type: PropTypes.oneOf([GameType.ARTIST, GameType.GENRE]).isRequired,
     genre: PropTypes.string.isRequired,
-    answers: PropTypes.arrayOf({
+    answers: PropTypes.arrayOf(PropTypes.shape({
       src: PropTypes.string.isRequired,
       genre: PropTypes.string.isRequired,
-    })
+    })).isRequired,
   }).isRequired,
 };
 

@@ -19,7 +19,7 @@ const App = (props) => {
       <Switch>
         <Route
           exact
-          path='/'
+          path="/"
           render={({history}) => (
             <WelcomeScreen
               errorsCount={errorsCount}
@@ -27,28 +27,28 @@ const App = (props) => {
             />
           )}
         />
-        <Route exact path='/login'>
+        <Route exact path="/login">
           <AuthScreen />
         </Route>
-        <Route exact path='/result'>
+        <Route exact path="/result">
           <WinScreen />
         </Route>
-        <Route exact path='/lose'>
+        <Route exact path="/lose">
           <GameOverScreen />
         </Route>
-        <Route exact path='/dev-artist'>
+        <Route exact path="/dev-artist">
           <ArtistGameScreen
             question={secondQuestion}
             onAnswer={() => {}}
           />
         </Route>
-        <Route exact path='/dev-genre'>
+        <Route exact path="/dev-genre">
           <GenreGameScreen
             question={firstQuestion}
             onAnswer={() => {}}
           />
         </Route>
-        <Route exact path='/game'>
+        <Route exact path="/game">
           <GameScreen
             errorsCount={errorsCount}
             questions={questions}
