@@ -25,13 +25,13 @@ export default [
     },
     answers: [{
       artist: `Maroon 5`,
-      avatar: `${AVATAR_URL}/${Math.random()}`,
+      picture: `${AVATAR_URL}/${Math.random()}`,
     }, {
       artist: `Royal Blood`,
-      avatar: `${AVATAR_URL}/${Math.random()}`,
+      picture: `${AVATAR_URL}/${Math.random()}`,
     }, {
       artist: `Berliner Philharmoniker`,
-      avatar: `${AVATAR_URL}/${Math.random()}`,
+      picture: `${AVATAR_URL}/${Math.random()}`,
     }]
   },
 ];
