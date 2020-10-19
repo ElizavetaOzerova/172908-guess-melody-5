@@ -5,13 +5,14 @@ import {GameType} from '../../const';
 class GenreGameScreen extends PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       answers: [false, false, false, false],
     };
   }
 
   render() {
-    const {question, onAnswer} = this.props;
+    const {question, onAnswer, renderPlayer} = this.props;
     const {genre, answers} = question;
     const {answers: userAnswers} = this.state;
 
@@ -43,10 +44,8 @@ class GenreGameScreen extends PureComponent {
             className="game__tracks">
             {answers.map((answer, i) => (
               <div key={`${answer.src}-${i}`} className="track">
-                <button className="track__button track__button--play" type="button" />
-                <div className="track__status">
-                  <audio src={answer.src} />
-                </div>
+                {renderPlayer(answer.src, i)}
+
                 <div className="game__answer">
                   <input
                     onChange={(e) => {
@@ -85,6 +84,7 @@ GenreGameScreen.propTypes = {
       genre: PropTypes.string.isRequired,
     })).isRequired,
   }).isRequired,
+  renderPlayer: PropTypes.func.isRequired,
 };
 
 export default GenreGameScreen;
